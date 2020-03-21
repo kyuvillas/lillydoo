@@ -97,13 +97,8 @@ export default {
   methods: {
         paketSelected:function (index) { 
           this.selectedPaketIndex = index;
-          this.$emit('paketSelected',this.selectedPaketIndex)
+          this.$emit('paketSelected',index)
         }
   }
 }
 </script>
-
-<style lang="scss">
-@import "../sass/main";
-
-</style>

@@ -5,23 +5,9 @@
       sourceMap: true,
       loaderOptions: {
         sass: {
-          data: `@import "@/sass/main.scss";`
+          prependData: `@import "@/sass/abstracts/_variables.scss";
+          @import "@/sass/abstracts/_mixins.scss";`
         }
       }
-    },
-    chainWebpack: config => {
-      config.module
-        .rule("fonts")
-        .test(/\.(ttf|otf|eot|woff|woff2)$/)
-        .use("file-loader")
-          .loader("file-loader")
-          .tap(options => {
-            options = {
-              // limit: 10000,
-              name: '/assets/fonts/[name].[ext]',
-            }
-            return options
-          })
-          .end()
     }
   };
