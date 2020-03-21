@@ -1,0 +1,35 @@
+.content-header {
+    height: 80vh;
+    
+    // background-image: url(../../img/baby_cover_1.jpg);   
+    
+    background-image: 
+        url("~/../assets/img/baby_cover_1.jpg");
+    background-size: cover;
+    background-position: bottom;
+
+    &__box{
+        position: absolute;
+        bottom: 21%;
+        right: 10%;
+        text-align: right;
+        // background-image: linear-gradient(to left, $color-white, $color-primary-dark);
+        // -webkit-background-clip: text;
+        color: $color-white;
+        text-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+
+        &--text{
+            display: block;
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: 1rem;    
+            text-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+            animation-name: moveInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;  /* start faster then becomes slower */
+
+        }
+        
+    }
+}

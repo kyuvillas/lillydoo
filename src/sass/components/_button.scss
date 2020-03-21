@@ -1,0 +1,88 @@
+
+/* 
+:link psuedo class are states of elements 
+:visited css when button was clicked before
+padding: top bottom
+top right rightbottom leftbottom
+*/
+.btn{
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .5rem 3rem;
+        display: inline-block;
+        border-radius: 10rem;
+        /* all properties & states are enabled to be aniimated */
+        transition: all .2s; 
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    /* box shadow: rightshadow bottom blurvalue */
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+        /* when hover, this is what will happen to after  
+            fading effect is opcity 0
+        */
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    // &:hover + .content-header {
+    //     background-image: 
+    //     url(../../img/baby_cover_2.jpg);
+    // } 
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        /* the styles of the 0%  will be applied  before the animation starts  */
+        animation-fill-mode: backwards;
+    }
+
+    /* duplicate element at the back of btn 
+        content, display *required
+    */
+    &::after {
+        content: "";             /* required */
+        display: inline-block;   /* required */
+        height: 100%;            /* of the original */
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &--white::after {
+            background-color: $color-white;
+        }
+    }
+    &--primary {
+        // background-image: linear-gradient(
+        //     to right bottom,
+        //     rgba($color-primary-light, 0.8),
+        //     rgba($color-primary-dark, 0.8)
+        // );
+        background-color: $color-primary;
+        color: $color-white;
+
+        &--white::after {
+            background-color: $color-primary;
+        }
+    }
+
+}

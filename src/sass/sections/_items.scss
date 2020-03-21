@@ -1,0 +1,55 @@
+.items {
+    padding-top: 13rem;
+    background-image: linear-gradient(to right bottom, 
+    rgba(153, 223, 221, 0.8), rgba(0, 151, 147, 0.8)), url("~/../assets/img/texture.jpg");
+    background-size: cover;
+    transform: skewY(-7deg);
+    height: 117vh;
+    margin: -22rem 0px;
+
+    @include respond(tab-port) { // width < 900?
+        padding-top: 7rem;
+        height: 60vh;;
+    }
+    @include respond(phone) { // width < 900?
+        margin: 0;
+        padding-top: 6rem;
+    }
+    @include respond(small-phone) { // width < 900?
+        padding-top: 4rem;
+    }
+
+    & > * {
+        transform: skewY(7deg);
+    }
+
+
+    &__content {
+        padding: 4rem 14rem;
+
+        @include respond(tab-port) { // width < 900?
+            font-size: 1rem;
+            padding: 0;
+            // padding-right: 2rem;
+            margin-top: 3rem;
+        }
+
+        &--mainbox {
+            width: 49%;
+            width: calc((100% - #{$gutter-items}) / 2);
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+            padding-left: 2rem;
+
+        }
+        &--right {
+            width: 47%;
+            display: inline-block;
+        }
+    }
+
+    
+
+}

@@ -1,0 +1,50 @@
+
+/* 2 things to animate or put keyframe 
+opacity
+transform
+*/
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{        
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* rotate(0deg) 
+    translateX because along x axis
+*/
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem) ; 
+    }
+
+    80%{        
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem) ; 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,31 @@
+
+.header {
+    position: relative;
+    height: 11vh;
+    background-color: $color-white;    
+    box-shadow: 0 0.5rem 2rem rgba($color-grey-light-1,.8);
+
+    @include respond(phone) {  //600px            
+        height: 9vh;
+        text-align: center;
+    }
+
+    &__logo-box {
+        vertical-align: middle;
+        padding: .9rem 3rem;
+        letter-spacing: 9px;
+        font-size: 1.6rem;
+    
+        @include respond(tab-port) { // width < 900?   
+            padding: 1.6rem 3rem;
+            font-size: 3rem;
+        }
+        
+        @include respond(phone) {  //600px        
+            padding: 1rem 3rem;
+            font-size: 3rem;
+        }
+        
+    
+    }
+}

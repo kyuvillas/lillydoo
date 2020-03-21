@@ -1,0 +1,42 @@
+.listitem {
+    padding: 0 4rem;
+    position: relative;
+
+    &:first-child {
+       margin-top: 2rem;
+       font-size: 4rem;
+      }
+
+    @include respond(tab-port) { // width < 900?
+        padding: 0;
+    }
+
+    &--icon {
+        position: absolute;
+        font-size: 5rem;
+        color: rgba($color-primary,0.8);
+        // display: inline-block;
+    }
+
+    &--text {
+        margin: 0rem 0 1rem 0; 
+        display: inline-block;
+        z-index: 2;
+        
+        @include respond(tab-port) { // width < 900?
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
+        }
+        @include respond(phone) { // width < 900?
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+    }
+
+    &--btn{
+        text-align: center;
+        padding: 2rem;
+    }
+}

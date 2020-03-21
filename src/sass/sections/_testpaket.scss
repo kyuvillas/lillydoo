@@ -1,0 +1,140 @@
+.testpaket {
+    height: 135vh;
+    padding: 2rem;
+ 
+    background-image: linear-gradient(
+            to right bottom,
+            ($color-white),
+            rgba($color-white, 0.9))
+    url("~/../assets/img/grains2.jpg");
+    background-repeat: repeat;
+
+    
+    @include respond(tab-port) { // width < 900?
+        padding: 3rem 0;
+        height: 130vh;
+    }
+    @include respond(phone) {     
+        height: 100vh; ;
+    }
+    
+    @include respond(small-phone) {     
+        height: 130vh; ;
+    }
+
+    &__size {
+        //Change for the <button> element
+        & {  
+            // border-left: .1rem solid  rgba($color-black,.2);
+            cursor: pointer;
+            display: inline-block;
+            margin: 2rem 0.5rem;
+            padding: 0;
+            max-width: 97rem;
+
+            @include respond(tab-land) { // width < 1200?
+                max-width: 17rem; //1 rem = 9px, 9/16 = 50%
+            }
+        
+            @include respond(tab-port) { // width < 900?
+                max-width: 10rem;
+                margin: 0;
+            }
+
+            @include respond(phone) { // width < 600?
+                max-width: 8rem;
+                margin: 0;
+            }
+            
+        }
+        &--sub {
+            display: block;
+            font-size: 1.5rem;;
+            color: $color-grey-dark;
+
+            &:hover, &:active {
+                color: $color-white;
+            }
+
+            @include respond(phone) { 
+                font-size: 0.9rem;
+            }
+        }
+        &--btn {
+            
+            &:link,
+            &:visited {
+                font-size: $default-font-size;
+                color: $color-black;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                border-bottom: 1px solid $color-primary;
+                padding: 1.5rem 4rem;
+                transition: all .2s;
+                
+                @include respond(tab-port) { // width < 900?
+                    padding: 1rem;
+                }
+            }
+
+            
+        
+            &:hover, &:active {
+                background-color: $color-primary;
+                color: $color-white;
+                box-shadow: 0 1rem 2rem rgba($color-black, .15);
+                transform: translateY(-2px);
+            }
+        
+            &:active {
+                box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+                transform: translateY(0);
+            }
+        }
+    }
+    
+    &__content {
+        // padding: 2rem;
+        max-width: 97rem;
+        
+        @include respond(tab-port) { // width < 900?
+            padding:3rem 3rem;
+        }
+
+        @include respond(phone) { // width < 900?
+            padding: 3rem 10rem;
+        }
+
+        @include respond(small-phone) { // width < 900?
+            padding: 0.5rem 2rem;
+            font-size: 1.2rem;
+        }
+        &--left {
+            text-align: center;
+
+            @include respond(tab-port) { // width < 900?
+                margin: 0;
+                margin-bottom: 0 !important;
+            }          
+        }
+        &--right {
+            @include respond(tab-port) { // width < 900?
+                margin: 3rem;
+            }   
+        } 
+        &--img {
+            height: 35rem;
+            width: auto;
+
+            
+            @include respond(tab-port) { 
+                height: 26rem;
+            }
+        
+            @include respond(phone) { 
+                height: 19rem;
+            }
+        }
+    }
+}
