@@ -9,22 +9,19 @@
                         <a href="#testpaket" @click="paketSelected(0)" class="testpaket__size--btn">
                             <span>1</span>
                             <span class="testpaket__size--sub">(2-5 KG)</span>
-                        </a>
-                        
+                        </a>                        
                     </div>
                     <div class="testpaket__size">
                         <a href="#testpaket" @click="paketSelected(1)" class="testpaket__size--btn">
                             <span>2</span>
                             <span class="testpaket__size--sub">(4-8 KG)</span>
-                        </a>
-                        
+                        </a>                        
                     </div>
                     <div class="testpaket__size">
                         <a href="#testpaket" @click="paketSelected(2)" class="testpaket__size--btn">
                             <span>3</span>
                             <span class="testpaket__size--sub">(6-10 KG)</span>
-                        </a>
-                        
+                        </a>                        
                     </div>
                     <div class="testpaket__size">
                         <a href="#testpaket" @click="paketSelected(3)" class="testpaket__size--btn">
@@ -88,36 +85,20 @@
 
 export default {
   name: 'TestPaket',
-  data: function () {
-    return {
-      pakets: [
-        {id:0, imgUrl: "product1.png"},
-        {id:1, imgUrl: "product2.png"},
-        {id:2, imgUrl: "product3.png"},
-        {id:3, imgUrl: "product4.png"},
-        {id:4, imgUrl: "product5.png"}
-      ],
-      selectedPaketIndex: 0
-    }
-  },
+  props: {
+        pakets: Array,
+        selectedPaketIndex: Number
+      },
   computed: {
       leftImg: function() {
-          console.log(this.pakets[this.selectedPaketIndex].imgUrl);
-          
             return  this.pakets[this.selectedPaketIndex].imgUrl
       }
   },
   methods: {
         paketSelected:function (index) { 
-          console.log(index);
-          
           this.selectedPaketIndex = index;
-        //   this.leftImg= this.pakets[this.selectedPaketIndex].imgUrl
+          this.$emit('paketSelected',this.selectedPaketIndex)
         }
-        // displayImgs: function(name) {
-        //     console.log('../assets/img/' + name );
-        //     return require(`../assets/img/${name}` );
-        // } 
   }
 }
 </script>

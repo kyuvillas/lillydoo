@@ -7,35 +7,32 @@
             
             <div class="row items__content">
                
-                <div class="items__content--mainbox">
+                <div class="items__content--mainbox"  v-for="item in paketItems" :key="item.id">
                     <div class="item-box">
-                        <img src="img/windel-gross.png" class="item-box__icon">
+                        <img  :src="require('../assets/img/'+item.imgUrl)" class="item-box__icon">
                         <h3 class="heading-tertiary u-margin-bottom-small">10 LILLYDOO WINDELN</h3>
                         <div class="item-box__text">
                             <ul>
-                                <li>    0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz </li>
-                                <li>    Extra weich und super bequem </li>
-                                <li>    Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption</li>
+                                <li  v-for="(d, index) in item.description" :key="index"> {{ d }} </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                  
-                <div class="items__content--mainbox">
+                <!-- <div class="items__content--mainbox">
                     <div class="item-box">
-                        <img src="img/feuchtücher.png" class="item-box__icon">
+                        <img :src="require('../assets/img/'+paketItems[1].imgUrl)"  class="item-box__icon">
                         <h3 class="heading-tertiary u-margin-bottom-small">
                             15 FEUCHTTÜCHER MIT 99 % WASSER
                         </h3>
                         <div class="item-box__text">                           
                             <ul>
-                                <li>   0 % Parfüme & PEGs, 100 % biologisch abbaubar
-                                </li>
+                                <li>   0 % Parfüme & PEGs, 100 % biologisch abbaubar</li>
                                 <li>   Natürlich rein, extra mild, Alternative zu "Wasser & Watte" </li>
                             </ul>
                         </div>
                     </div>
-                </div> 
+                </div>  -->
 
             </div> 
             
@@ -46,10 +43,17 @@
 
 export default {
   name: 'Items',
-  data: function () {
-    return {
-    }
+  props: {
+      paketItems: Array
   }
+//   data: function () {
+//     return {
+//       paketItems: [
+//         {id:0, imgUrl: "windel-gross.png"},
+//         {id:1, imgUrl: "feuchtücher.png"}
+//       ]
+//     }
+//   }
 }
 </script>
 <style lang="scss">
