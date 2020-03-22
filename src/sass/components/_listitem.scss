@@ -1,5 +1,5 @@
 .listitem {
-    padding: 0 4rem;
+    // padding: 0 4rem;
     position: relative;
 
     &:first-child {
@@ -13,13 +13,19 @@
 
     &--icon {
         position: absolute;
-        font-size: 5rem;
+        top: 0.5rem;
+        font-size: 3rem;
         color: rgba($color-primary,0.8);
         // display: inline-block;
+
+        &:before {
+            content: '✓';
+            color: $color-primary, !important; 
+        }
     }
 
     &--text {
-        margin: 0rem 0 1rem 0; 
+        margin: 0.5rem 0px 0rem 4rem;
         display: inline-block;
         z-index: 2;
         

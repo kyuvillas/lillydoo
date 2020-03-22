@@ -6,34 +6,34 @@
 
                 <div>
                     <div class="testpaket__size">
-                        <a href="#testpaket" @click="paketSelected(0)" class="testpaket__size--btn">
-                            <span>1</span>
+                        <a href="#testpaket" @click="paketSelected(0)" :class="[selected === 0 ? 'testpaket__size--btn--active':'testpaket__size--btn']" >
+                            <h3>1</h3>
                             <span class="testpaket__size--sub">(2-5 KG)</span>
                         </a>                        
                     </div>
                     <div class="testpaket__size">
-                        <a href="#testpaket" @click="paketSelected(1)" class="testpaket__size--btn">
-                            <span>2</span>
+                        <a href="#testpaket" @click="paketSelected(1)" :class="[selected === 1 ? 'testpaket__size--btn--active':'testpaket__size--btn']" >
+                            <h3>2</h3>
                             <span class="testpaket__size--sub">(4-8 KG)</span>
                         </a>                        
                     </div>
                     <div class="testpaket__size">
-                        <a href="#testpaket" @click="paketSelected(2)" class="testpaket__size--btn">
-                            <span>3</span>
+                        <a href="#testpaket" @click="paketSelected(2)" :class="[selected === 2 ? 'testpaket__size--btn--active':'testpaket__size--btn']" >
+                            <h3>3</h3>
                             <span class="testpaket__size--sub">(6-10 KG)</span>
                         </a>                        
                     </div>
                     <div class="testpaket__size">
-                        <a href="#testpaket" @click="paketSelected(3)" class="testpaket__size--btn">
-                            <span>4</span>
+                        <a href="#testpaket" @click="paketSelected(3)" :class="[selected === 3 ? 'testpaket__size--btn--active':'testpaket__size--btn']" >
+                            <h3>4</h3>
                             <span class="testpaket__size--sub">(9-14 KG)</span>
                         </a>
                         
                     </div>
                     <div class="testpaket__size">
-                        <a href="#testpaket" @click="paketSelected(4)" class="testpaket__size--btn">
-                            <span>5</span>
-                            <span class="testpaket__size--sub" >(11-16 KG)</span>
+                        <a href="#testpaket"  @click="paketSelected(4)" :class="[selected === 4 ? 'testpaket__size--btn--active':'testpaket__size--btn']" >
+                            <h3>5</h3>
+                            <span class="testpaket__size--sub">(11-16 KG)</span>
                         </a>
                         
                     </div>
@@ -43,30 +43,33 @@
             
             <div class="row testpaket__content">
                 <div class="col-1-of-2 testpaket__content--left">
-                        <!-- <img class="testpaket__content--img"  :src="require(leftImg)"  /> -->
                         <img class="testpaket__content--img" :src="require('../assets/img/'+leftImg)"  />
-                        <!-- <img class="testpaket__content--img" src="~../img/product2.png"/> -->
-                        <!-- <img :src="require('@/assets/logo.png')" -->
                 </div>
                 <div class="col-1-of-2 ">
                     
                     <h3>Teste jetzt unsere hautfreundlichen Windeln </h3>
-                    
+                    <transition name="fade">
+                        <h3 v-if="selectedPaketIndex < 3">und erhalte unsere Feuchttücher mit 99 % Wasser</h3>
+                    </transition>
+
+                    <transition name="fade">
+                      <h3 v-if="selectedPaketIndex >= 3">und erhalte die Sensitiven Feuchttücher </h3>
+                    </transition>
                     <div class="listitem">
-                        <!-- <svg class="listitem--icon" src="icons/checkmark.svg"></svg> -->
-                        <span class="listitem--text">- Erhalte unsere Feuchttücher mit 99 % Wasser.</span>
+                        <i class="listitem--icon"></i>
+                        <span class="listitem--text">Erhalte unsere Feuchttücher mit 99 % Wasser.</span>
                     </div>
                     <div class="listitem">
-                        <!-- <i class="fas fa-check listitem--icon"></i> -->
-                        <span class="listitem--text">- Wir zahlen die Produkte, Du nur den Versand.</span>
+                        <i class="listitem--icon"></i>
+                        <span class="listitem--text">Wir zahlen die Produkte, Du nur den Versand.</span>
                     </div>
                     <div class="listitem">
-                        <!-- <i class="fas fa-check listitem--icon"></i> -->
-                        <span class="listitem--text">-  Automatischer Übergang ins jederzeit kündbare Windel-Abo für 49,50 € pro Lieferung.</span>
+                        <i class="listitem--icon"></i>
+                        <span class="listitem--text">Automatischer Übergang ins jederzeit kündbare Windel-Abo für 49,50 € pro Lieferung.</span>
                     </div>
                     <div class="listitem">
-                        <!-- <i class="fas fa-check listitem--icon"></i> -->
-                        <span class="listitem--text">- Preise inkl. MwSt., ggf. zzgl. Versandkosten</span>
+                        <i class="listitem--icon"></i>
+                        <span class="listitem--text">Preise inkl. MwSt., ggf. zzgl. Versandkosten</span>
                     </div>
                     
                     <div class="listitem">
@@ -85,6 +88,11 @@
 
 export default {
   name: 'TestPaket',
+  data(){
+      return {  
+        selected:-1
+      }
+  },
   props: {
         pakets: Array,
         selectedPaketIndex: Number
@@ -96,9 +104,21 @@ export default {
   },
   methods: {
         paketSelected:function (index) { 
-          this.selectedPaketIndex = index;
+            this.selected = index;
           this.$emit('paketSelected',index)
         }
   }
 }
 </script>
+
+<style lang="scss"  >
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>

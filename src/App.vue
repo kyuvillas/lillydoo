@@ -27,22 +27,135 @@ export default {
   },
   data () {
     return {
-      pakets: [],
+      pakets: [
+        {
+          id: 0, 
+          imgUrl: "product1.png",
+          paketItems:[
+            {
+              id: 0,
+              name: "10 Lillydoo Windeln",
+              imgUrl: "windel-gross.png",
+              description: [
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+              ]
+            },
+            {
+              id: 1,
+              name: "15 Feuchtücher mit 99 % Wasser",
+              imgUrl: "feuchtücher_lightblue.png",
+              description: [
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra weich und super bequem"
+              ]
+            }
+          ]
+        },
+        {
+          id: 1, 
+          imgUrl: "product2.png",
+          paketItems:[
+            {
+              id: 0,
+              name: "10 Lillydoo Windeln",
+              imgUrl: "windel-gross.png",
+              description: [
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+              ]
+            },
+            {
+              id: 1,
+              name: "15 Feuchtücher mit 99 % Wasser",
+              imgUrl: "feuchtücher_lightblue.png",
+              description: [
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra weich und super bequem"
+              ]
+            }
+          ]
+        },
+        {
+          id: 2, 
+          imgUrl: "product3.png",
+          paketItems:[
+            {
+              id: 0,
+              name: "10 Lillydoo Windeln",
+              imgUrl: "windel-gross.png",
+              description: [
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+              ]
+            },
+            {
+              id: 1,
+              name: "15 Feuchtücher mit 99 % Wasser",
+              imgUrl: "feuchtücher_lightblue.png",
+              description: [
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra weich und super bequem"
+              ]
+            }
+          ]
+        },
+        {
+          id: 3, 
+          imgUrl: "product4.png",
+          paketItems:[
+            {
+              id: 0,
+              name: "10 Lillydoo Windeln",
+              imgUrl: "windel-gross.png",
+              description: [
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+              ]
+            },
+            {
+              id: 1,
+              name: "15 Feuchtücher mit 99 % Wasser",
+              imgUrl: "feuchtücher.png",
+              description: [
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra weich und super bequem"
+              ]
+            }
+          ]
+        },
+        {
+          id: 4, 
+          imgUrl: "product5.png",
+          paketItems:[
+            {
+              id: 0,
+              name: "10 Lillydoo Windeln",
+              imgUrl: "windel-gross.png",
+              description: [
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+              ]
+            },
+            {
+              id: 1,
+              name: "15 Feuchtücher mit 99 % Wasser",
+              imgUrl: "feuchtücher.png",
+              description: [
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra weich und super bequem"
+              ]
+            }
+          ]
+        }
+      ],
       selectedPaketIndex: 0
     }
-  },
-  mounted: function() {
-    fetch('/data.json',{
-      method: 'get'
-    })
-    .then((response) => {
-     return (response.json());
-      
-    })
-    .then((jsonData) => {
-      console.log(jsonData);
-      this.pakets = jsonData;
-    })
   }
 }
 </script>

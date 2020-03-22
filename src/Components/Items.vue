@@ -46,13 +46,5 @@ export default {
   props: {
       paketItems: Array
   }
-//   data: function () {
-//     return {
-//       paketItems: [
-//         {id:0, imgUrl: "windel-gross.png"},
-//         {id:1, imgUrl: "feuchtücher.png"}
-//       ]
-//     }
-//   }
 }
 </script>
