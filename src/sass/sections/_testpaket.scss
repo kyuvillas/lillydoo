@@ -5,9 +5,12 @@
     background-image: linear-gradient(
             to right bottom,
             ($color-white),
-            rgba($color-white, 0.9))
-    url("~/../assets/img/grains2.jpg");
-    background-repeat: repeat;
+            rgba($color-white, 0.9)),
+    // url("~/../assets/img/grains2.jpg"),
+    url("~/../assets/img/flowers.png");
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: middle;
 
     
     @include respond(tab-port) { // width < 900?
@@ -115,6 +118,8 @@
     &__content {
         // padding: 2rem;
         max-width: 97rem;
+
+        
         
         @include respond(tab-port) { // width < 900?
             padding:3rem 3rem;
@@ -153,6 +158,12 @@
             @include respond(phone) { 
                 height: 19rem;
             }
+        }
+        &--oeko-logo {
+            height: 8rem;
+            position: absolute;
+            left: 21rem;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
         }
     }
 }

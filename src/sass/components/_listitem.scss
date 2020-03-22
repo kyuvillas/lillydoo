@@ -1,5 +1,5 @@
 .listitem {
-    // padding: 0 4rem;
+    padding-right: 1rem;
     position: relative;
 
     &:first-child {
@@ -13,7 +13,7 @@
 
     &--icon {
         position: absolute;
-        top: 0.5rem;
+        top: -.5rem;
         font-size: 3rem;
         color: rgba($color-primary,0.8);
         // display: inline-block;

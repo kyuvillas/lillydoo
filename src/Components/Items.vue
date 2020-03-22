@@ -1,7 +1,7 @@
 <template>
     <section class="items">
               <div class="section__header">
-                <h2 class="section__header--title-white">Dein Testpaket enthält</h2>
+                <h1 class="section__header--title-white">Dein Testpaket enthält</h1>
 
             </div>
             

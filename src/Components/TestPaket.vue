@@ -2,7 +2,7 @@
     <section class="testpaket" id="testpaket">
            <div class="section__header">
                 <h2 class="section__header--title">Entdecke unsere Hautfreundlichkeit</h2>                
-                <h2 class="section__header--sub">Wähle deine Größe:</h2>
+                <h2 class="heading-simple section__header--sub ">Wähle deine Größe:</h2>
 
                 <div>
                     <div class="testpaket__size">
@@ -42,19 +42,23 @@
             </div>
             
             <div class="row testpaket__content">
-                <div class="col-1-of-2 testpaket__content--left">
+                <div class="col-1-of-2 testpaket__content--left"> 
+                        <img class="testpaket__content--oeko-logo" :src="require('../assets/img/oekotex_green_de.svg')"  />   
                         <img class="testpaket__content--img" :src="require('../assets/img/'+leftImg)"  />
                 </div>
                 <div class="col-1-of-2 ">
                     
-                    <h3>Teste jetzt unsere hautfreundlichen Windeln </h3>
-                    <transition name="fade">
-                        <h3 v-if="selectedPaketIndex < 3">und erhalte unsere Feuchttücher mit 99 % Wasser</h3>
-                    </transition>
+                    <div class="heading-simple">
+                        <p>Teste jetzt unsere hautfreundlichen Windeln </p>
+                        <transition name="fade">
+                            <p v-if="selectedPaketIndex < 3" >und erhalte unsere Feuchttücher mit 99 % Wasser</p>
+                        </transition>
 
-                    <transition name="fade">
-                      <h3 v-if="selectedPaketIndex >= 3">und erhalte die Sensitiven Feuchttücher </h3>
-                    </transition>
+                        <transition name="fade">
+                        <p v-if="selectedPaketIndex >= 3" >und erhalte die Sensitiven Feuchttücher </p>
+                        </transition>
+                    </div>
+                    
                     <div class="listitem">
                         <i class="listitem--icon"></i>
                         <span class="listitem--text">Erhalte unsere Feuchttücher mit 99 % Wasser.</span>

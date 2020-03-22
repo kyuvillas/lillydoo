@@ -16,6 +16,13 @@ h1,h2,h3 {
     }
 }
 
+.heading-simple {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgba($color-black,0.7)
+    
+}
 
 .heading-secondary {
     font-size: 3.5rem;
