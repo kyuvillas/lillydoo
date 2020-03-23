@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header /> 
+    <ContentHeader />
     <TestPaket 
       :pakets="pakets"
       :selectedPaketIndex="selectedPaketIndex"
@@ -10,20 +11,26 @@
     <Items v-if="pakets"
     :paketItems="pakets[selectedPaketIndex].paketItems" 
     />
+
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
+import ContentHeader from './components/ContentHeader'
 import TestPaket from './components/TestPaket'
 import Items from './components/Items'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
   components: {
     Header,
+    ContentHeader,
     TestPaket,
-    Items
+    Items,
+    Footer
   },
   data () {
     return {

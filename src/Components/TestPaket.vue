@@ -44,8 +44,11 @@
             <div class="row testpaket__content">
                 <div class="col-1-of-2 testpaket__content--left"> 
                         <img class="testpaket__content--oeko-logo" :src="require('../assets/img/oekotex_green_de.svg')"  />   
-                        <img class="testpaket__content--img" :src="require('../assets/img/'+leftImg)"  />
-                </div>
+                        <transition name="slide-fade" mode="out-in">        
+                            <img class="testpaket__content--img" :key="leftImg" :src="require('../assets/img/'+leftImg)"  />
+                        <!-- ... the buttons ... -->
+                        </transition>
+               </div>
                 <div class="col-1-of-2 ">
                     
                     <div class="heading-simple">
@@ -59,10 +62,6 @@
                         </transition>
                     </div>
                     
-                    <div class="listitem">
-                        <i class="listitem--icon"></i>
-                        <span class="listitem--text">Erhalte unsere Feuchttücher mit 99 % Wasser.</span>
-                    </div>
                     <div class="listitem">
                         <i class="listitem--icon"></i>
                         <span class="listitem--text">Wir zahlen die Produkte, Du nur den Versand.</span>
@@ -125,4 +124,19 @@ export default {
 .fade-enter, .fade-leave-active /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
 </style>

@@ -1,8 +1,10 @@
 .section__header {
     display: block;
     text-align: center;
-    margin: 1rem;
-    text-shadow: 0 0.5rem 2rem rgba($color-grey-dark,.2);
+    margin: 6rem 1rem 1rem;
+    // margin: 1rem;
+    // text-shadow: 0 0.5rem 2rem rgba($color-grey-dark,.2);
+    
 
     @include respond(tab-port) { // width < 900?
         margin: 0;
@@ -20,7 +22,13 @@
     &--title{
         text-transform: uppercase;
         letter-spacing: 7px;
+        transition: transform .3s;
 
+
+        // &:hover {
+        //     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+        //     transform: translateY(-0.5rem) scale(1);
+        // }
         // @include respond(phone) { 
         //     font-size: 100%;
         // }
@@ -38,6 +46,7 @@
         color: $color-white;
         text-transform: uppercase;
         letter-spacing: 7px;
+        font-size: 3rem;
 
         @include respond(phone) { 
             font-size: 100%;

@@ -1,33 +1,43 @@
 .content-header {
-    height: 80vh;
+    position: relative;
+    background-image:  url("/../assets/img/main-bg.png");
+    height: 90vh;
     
-    // background-image: url(../../img/baby_cover_1.jpg);   
-    
-    background-image: 
-        url("~/../assets/img/baby_cover_1.jpg");
     background-size: cover;
-    background-position: bottom;
-
     &__box{
         position: absolute;
-        bottom: 21%;
+        bottom: 15%;
         right: 10%;
-        text-align: right;
-        // background-image: linear-gradient(to left, $color-white, $color-primary-dark);
-        // -webkit-background-clip: text;
-        color: $color-white;
-        text-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        text-align: center;
+        background-color: rgba(255,255,255,0.7);
+        color: #fff;
+        // text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        padding: 3rem 5rem 4rem;
+        border-radius: 7px;
+        max-width: 41rem;
 
         &--text{
             display: block;
-            font-size: 4rem;
-            font-weight: 600;
-            letter-spacing: 1rem;    
-            text-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+            font-size: 3rem;
+            letter-spacing: 0.5rem;
+            color: #333;
+            animation-name: moveInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            line-height: 4rem;
+            margin-bottom: 1rem;
+            // background: url("~/../assets/img/main-bg.png") center;
+            // background-clip:                text;
+            // -webkit-background-clip:        text;
+            // color: transparent;
+
 
             animation-name: moveInLeft;
             animation-duration: 1s;
             animation-timing-function: ease-out;  /* start faster then becomes slower */
+
+            
+    
 
         }
         
