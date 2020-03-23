@@ -8,6 +8,9 @@
         @include respond(tab-port) {
             margin-bottom: $gutter-vertical-small;
         }
+        @include respond(tab-mini-port) { // width < 900?
+            margin-right: 0;
+        } 
     }
     
     @include respond(tab-port) {

@@ -23,15 +23,8 @@
         text-transform: uppercase;
         letter-spacing: 7px;
         transition: transform .3s;
+        margin: 0 2rem;
 
-
-        // &:hover {
-        //     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-        //     transform: translateY(-0.5rem) scale(1);
-        // }
-        // @include respond(phone) { 
-        //     font-size: 100%;
-        // }
     }
     &--sub{
         padding-top: 1rem;
@@ -48,6 +41,9 @@
         letter-spacing: 7px;
         font-size: 3rem;
 
+        @include respond(tab-port) { 
+            font-size: 2rem;
+        }
         @include respond(phone) { 
             font-size: 100%;
         }

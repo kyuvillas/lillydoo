@@ -1,22 +1,22 @@
 
 .items {
-    padding-top: 13rem;
+    padding-top: 9rem;
     background-image: linear-gradient(to right bottom, 
     rgba(153, 223, 221, 0.8), rgba(0, 151, 147, 0.8)), url("~/../assets/img/texture.jpg");
     background-size: cover;
     transform: skewY(-7deg);
-    height: 117vh;
-    margin: -22rem 0px;
+    height: 125vh;
+    margin: -13rem 0px;
 
     @include respond(tab-port) { // width < 900?
         padding-top: 7rem;
         height: 60vh;;
     }
-    @include respond(phone) { // width < 900?
+    @include respond(phone) { // width < 600?
         margin: 0;
         padding-top: 6rem;
     }
-    @include respond(small-phone) { // width < 900?
+    @include respond(small-phone) { // width < 400?
         padding-top: 4rem;
     }
 
@@ -31,7 +31,6 @@
         @include respond(tab-port) { // width < 900?
             font-size: 1rem;
             padding: 0;
-            // padding-right: 2rem;
             margin-top: 3rem;
         }
 

@@ -12,8 +12,8 @@
 
     
     @include respond(tab-port) { // width < 900?
-        padding: 3rem 0;
-        height: 130vh;
+        padding: 9rem 0;
+        height: 100vh;
     }
     @include respond(phone) {     
         height: 100vh; ;
@@ -117,9 +117,7 @@
         // padding: 2rem;
         max-width: 97rem;
 
-        
-        
-        @include respond(tab-port) { // width < 900?
+        @include respond(tab-mini-port) { // width < 700?
             padding:3rem 3rem;
         }
 
@@ -138,11 +136,20 @@
                 margin: 0;
                 margin-bottom: 0 !important;
             }          
+            @include respond(tab-mini-port) { // width < 900?
+                
+            } 
         }
         &--right {
+            transition: all .5s ease;
             @include respond(tab-port) { // width < 900?
-                margin: 3rem;
+                padding: 0;
+                margin: 2rem 0;
             }   
+
+            @include respond(tab-mini-port) { // width < 900?
+                
+            } 
         } 
         &--img {
             height: 35rem;
@@ -151,7 +158,6 @@
 
             &:hover {
                 transform: translateY(-1.5rem) scale(1.03);
-                // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
             }
             
             @include respond(tab-port) { 
@@ -163,10 +169,19 @@
             }
         }
         &--oeko-logo {
-            height: 8rem;
+            width: 10%;
+            height: auto;
             position: absolute;
-            left: 19rem;
-            box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
+            left: 14%;
+            box-shadow: 0 0.2rem 1rem rgba($color-grey-dark, 0.15);
+
+            @include respond(tab-port) { 
+                left: 11%;
+            }
+        
+            @include respond(phone) { 
+                left: 30%;
+            }
         }
     }
 }

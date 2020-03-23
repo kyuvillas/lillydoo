@@ -4,9 +4,8 @@
                 
                 <h1 class="content-header__box--text">
                     Dein gratis Testpaket
-                </h1>
-    
-                <a href="#" class="btn btn--primary btn--animated">Wähle deine Größe</a>
+                </h1>    
+                <a href="#testpaket" class="btn btn--primary btn--animated content-header__box--btn">Wähle deine Größe</a>
             </div>
         </section>
 </template>
@@ -17,9 +16,3 @@ export default {
   name: 'ContentHeader'
 }
 </script>
-<style scoped>
-
-.blue {
-    background-color: blue !important;
-}
-</style>

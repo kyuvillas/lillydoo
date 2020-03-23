@@ -16,6 +16,19 @@
         border-radius: 7px;
         max-width: 41rem;
 
+        @include respond(tab-port) { // width < 900?            
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color-white, 0.9);
+            padding: 2rem 2rem 2rem;
+            width: 50rem;
+            height: fit-content;
+        }
+        @include respond(phone) { // width < 900?    
+            width: 30rem;
+        }
+
         &--text{
             display: block;
             font-size: 3rem;
@@ -26,19 +39,30 @@
             animation-timing-function: ease-out;
             line-height: 4rem;
             margin-bottom: 1rem;
-            // background: url("~/../assets/img/main-bg.png") center;
-            // background-clip:                text;
-            // -webkit-background-clip:        text;
-            // color: transparent;
-
-
+            
             animation-name: moveInLeft;
             animation-duration: 1s;
             animation-timing-function: ease-out;  /* start faster then becomes slower */
 
-            
-    
+            @include respond(tab-mini-port) { // width < 700?            
+                font-size: 2.5rem;
+            }
+            @include respond(phone) { // width < 700?            
+                font-size: 2.5rem;
+            }
 
+           
+        }
+        &--btn {
+            .btn:link, .btn:visited {
+                
+                @include respond(tab-port) { // width < 900?            
+                    font-size: 1.4rem;
+                }
+                @include respond(phone) { // width < 900?            
+                    font-size: 1rem;
+                }
+            }
         }
         
     }

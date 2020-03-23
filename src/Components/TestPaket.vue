@@ -49,16 +49,16 @@
                         <!-- ... the buttons ... -->
                         </transition>
                </div>
-                <div class="col-1-of-2 ">
+                <div class="col-1-of-2 testpaket__content--right">
                     
                     <div class="heading-simple">
-                        <p>Teste jetzt unsere hautfreundlichen Windeln </p>
+                        <p class="text-inline">Teste jetzt unsere hautfreundlichen Windeln und erhalte</p>
                         <transition name="fade">
-                            <p v-if="selectedPaketIndex < 3" >und erhalte unsere Feuchttücher mit 99 % Wasser</p>
+                            <p class="text-inline" v-if="selectedPaketIndex < 3" >unsere Feuchttücher mit 99 % Wasser</p>
                         </transition>
 
                         <transition name="fade">
-                        <p v-if="selectedPaketIndex >= 3" >und erhalte die Sensitiven Feuchttücher </p>
+                        <p class="text-inline" v-if="selectedPaketIndex >= 3" >die Sensitiven Feuchttücher </p>
                         </transition>
                     </div>
                     
@@ -115,28 +115,6 @@ export default {
 </script>
 
 <style lang="scss"  >
-  .fade-enter-active, .fade-leave-active {
-  transition: opacity 1s;
-}
-.fade-leave-active {
-    transition: opacity .5s;
-}
-.fade-enter, .fade-leave-active /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
 
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(20px);
-  opacity: 0;
-}
 
 </style>
