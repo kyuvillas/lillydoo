@@ -4,8 +4,9 @@
     height: 80vh;
     margin-top: -10rem;
     background-image: linear-gradient(to right bottom, rgba($color-white, 0.9), rgba($color-grey-light-2, 0.9)), url(/../assets/img/flowers.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: bottom;
+    // background-size: cover;
     
     @include respond(tab-port) { 
         height: 70vh;

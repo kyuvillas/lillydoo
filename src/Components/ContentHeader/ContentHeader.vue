@@ -16,3 +16,10 @@ export default {
   name: 'ContentHeader'
 }
 </script>
+
+<style lang="scss"  >
+  
+  @import "../../sass/main.scss";
+  @import "content-header.scss";
+
+</style>

@@ -43,9 +43,9 @@
             
             <div class="row testpaket__content">
                 <div class="col-1-of-2 testpaket__content--left"> 
-                        <img class="testpaket__content--oeko-logo" :src="require('../assets/img/oekotex_green_de.svg')"  />   
+                        <img class="testpaket__content--oeko-logo" :src="require('../../assets/img/oekotex_green_de.svg')"  />   
                         <transition name="slide-fade" mode="out-in">        
-                            <img class="testpaket__content--img" :key="leftImg" :src="require('../assets/img/'+leftImg)"  />
+                            <img class="testpaket__content--img" :key="leftImg" :src="require('../../assets/img/'+leftImg)"  />
                         <!-- ... the buttons ... -->
                         </transition>
                </div>
@@ -115,6 +115,8 @@ export default {
 </script>
 
 <style lang="scss"  >
-
+  
+  @import "../../sass/main.scss";
+  @import "testpaket.scss";
 
 </style>

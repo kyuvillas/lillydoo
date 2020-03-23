@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import Header from './components/Header'
-import ContentHeader from './components/ContentHeader'
-import TestPaket from './components/TestPaket'
-import Items from './components/Items'
-import Footer from './components/Footer'
+import Header from './components/Header/Header'
+import ContentHeader from './components/ContentHeader/ContentHeader'
+import TestPaket from './components/TestPaket/TestPaket'
+import Items from './components/Items/Items'
+import Footer from './components/Footer/Footer'
 
 export default {
   name: 'App',

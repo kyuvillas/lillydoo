@@ -9,7 +9,7 @@
                
                 <div class="items__content--mainbox"  v-for="item in paketItems" :key="item.id">
                     <div class="item-box">
-                        <img  :src="require('../assets/img/'+item.imgUrl)" class="item-box__icon">
+                        <img  :src="require('../../assets/img/'+item.imgUrl)" class="item-box__icon">
                         <h3 class="heading-tertiary u-margin-bottom-small">10 LILLYDOO WINDELN</h3>
                         <div class="item-box__text">
                             <ul>
@@ -19,20 +19,6 @@
                     </div>
                 </div>
                  
-                <!-- <div class="items__content--mainbox">
-                    <div class="item-box">
-                        <img :src="require('../assets/img/'+paketItems[1].imgUrl)"  class="item-box__icon">
-                        <h3 class="heading-tertiary u-margin-bottom-small">
-                            15 FEUCHTTÜCHER MIT 99 % WASSER
-                        </h3>
-                        <div class="item-box__text">                           
-                            <ul>
-                                <li>   0 % Parfüme & PEGs, 100 % biologisch abbaubar</li>
-                                <li>   Natürlich rein, extra mild, Alternative zu "Wasser & Watte" </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>  -->
 
             </div> 
             
@@ -48,3 +34,9 @@ export default {
   }
 }
 </script>
+<style lang="scss"  >
+  
+  @import "../../sass/main.scss";
+  @import "items.scss";
+
+</style>

@@ -13,11 +13,6 @@
         } 
     }
     
-    @include respond(tab-port) {
-        max-width: 50rem;
-        padding: 0 3rem;
-    }
-
     @include clearfix;
 
     [class^="col-"] {

@@ -1,0 +1,25 @@
+
+.header { height: 11vh;
+    background-color: $color-white;    
+    box-shadow: 0 0.5rem 2rem rgba($color-grey-light-1,.8);
+    overflow: hidden;
+    padding: 1.3rem 3rem;
+
+    @include respond(tab-port) {     
+        text-align: center;
+        padding: 2.3rem 3rem;
+    }
+    
+    &__logo-box {
+        float: left;
+        text-align: center;
+        padding: 1rem;
+        line-height: 3rem;
+        height: 5rem;
+        width: auto;
+
+        @include respond(tab-port) {     
+            height: 5.6rem;
+        }
+    }
+}
