@@ -1,17 +1,25 @@
 <template>
   <div id="app">
+
+    <!-- 1. Component Header  -->
     <Header /> 
+
+    <!-- 2. Content with cover picture and directing button -->
     <ContentHeader />
+
+    <!-- 3. Section to select size -->
     <TestPaket 
       :pakets="pakets"
       :selectedPaketIndex="selectedPaketIndex"
       @paketSelected="selectedPaketIndex = $event"
     />
     
-    <Items v-if="pakets"
+    <!-- 4. Selected items presented based on size selected  -->
+    <Items
     :paketItems="pakets[selectedPaketIndex].paketItems" 
     />
 
+    <!-- 5. Generic Footer  -->
     <Footer />
   </div>
 </template>

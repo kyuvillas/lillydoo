@@ -2,9 +2,7 @@
     <header class="header">
         
             <img class="header__logo-box" src="../../assets/img/lillydoo_logo.png"/>     
-        <!-- <div class="header__logo-box">
-            <img class="header__logo-box" src="../../assets/img/lillydoo_logo.png"/>           
-        </div> -->
+       
     </header>
 </template>
 
