@@ -5,9 +5,14 @@
     overflow: hidden;
     padding: 1.3rem 3rem;
 
+
     @include respond(tab-port) {     
         text-align: center;
         padding: 2.3rem 3rem;
+    }
+    @include respond(tab-mini-port) {     
+        text-align: center;
+        padding: 1.3rem 3rem;
     }
     
     &__logo-box {

@@ -24,9 +24,6 @@
         // max-width: 20rem;
         // width: calc((100% - 0.5rem) / 2);
     }
-    @include respond(tab-port) {
-        padding: 1rem;
-    }
 
     &__icon {
         height: 20rem;
