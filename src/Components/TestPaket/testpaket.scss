@@ -114,8 +114,11 @@
     }
     
     &__content {
-        // padding: 2rem;
         max-width: 97rem;
+
+        @include respond(tab-port) { // width < 900?
+            padding: 4rem 3rem;
+        }
 
         @include respond(tab-mini-port) { // width < 700?
             padding:3rem 3rem;

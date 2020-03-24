@@ -1,10 +1,11 @@
 <template>
     <section class="testpaket" id="testpaket">
-           <div class="section__header">
-                <h2 class="section__header--title">Entdecke unsere Hautfreundlichkeit</h2>                
+           <div  class="section__header">
+                <h2  data-aos="fade"
+       data-aos-duration="800" data-aos-easing="ease-in" class="section__header--title">Entdecke unsere Hautfreundlichkeit</h2>                
                 <h2 class="heading-simple section__header--sub ">Wähle deine Größe:</h2>
 
-                <div>
+                <div data-aos="fade-right" data-aos-easing="ease-in"  data-aos-delay="500">
                     <div class="testpaket__size">
                         <a href="#testpaket" @click="paketSelected(0)" :class="[selected === 0 ? 'testpaket__size--btn--active':'testpaket__size--btn']" >
                             <h3>1</h3>

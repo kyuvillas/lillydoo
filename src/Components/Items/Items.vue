@@ -1,13 +1,13 @@
 <template>
     <section class="items">
               <div class="section__header">
-                <h1 class="section__header--title-white">Dein Testpaket enthält</h1>
+                <h1 data-aos="fade" data-aos-easing="ease-in" class="section__header--title-white">Dein Testpaket enthält</h1>
 
             </div>
             
             <div class="row items__content">
                
-                <div class="items__content--mainbox"  v-for="item in paketItems" :key="item.id">
+                <div data-aos="fade-right" data-aos-easing="ease-in"  data-aos-delay="500" class="items__content--mainbox"  v-for="item in paketItems" :key="item.id">
                     <div class="item-box">
                         <img  :src="require('../../assets/img/'+item.imgUrl)" class="item-box__icon">
                         <h3 class="heading-tertiary u-margin-bottom-small">10 LILLYDOO WINDELN</h3>

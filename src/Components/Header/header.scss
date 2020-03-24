@@ -9,10 +9,12 @@
     @include respond(tab-port) {     
         text-align: center;
         padding: 2.3rem 3rem;
+        
     }
     @include respond(tab-mini-port) {     
         text-align: center;
         padding: 1.3rem 3rem;
+        height: 9vh;
     }
     
     &__logo-box {
@@ -25,6 +27,11 @@
 
         @include respond(tab-port) {     
             height: 5.6rem;
+            float: none;
+        }
+        
+        @include respond(phone) {     
+            height: 4.6rem;
         }
     }
 }

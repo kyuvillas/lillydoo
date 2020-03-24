@@ -1,7 +1,7 @@
 <template>
     <header class="header">
-        
-            <img class="header__logo-box" src="../../assets/img/lillydoo_logo.png"/>     
+        <!-- <h1 data-aos="fade">AOS Demo</h1> -->
+            <img class="header__logo-box" data-aos="fade" src="../../assets/img/lillydoo_logo.png"/>     
        
     </header>
 </template>
